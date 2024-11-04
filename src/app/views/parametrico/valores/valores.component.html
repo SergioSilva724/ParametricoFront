@@ -1,0 +1,456 @@
+<c-row ngPreserveWhitespaces>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Informacion Cualitativa</strong> <small>En la determinacion de cedulas</small>
+      </c-card-header>
+      <c-card-body>
+        <p class="text-body-secondary small">
+          Valores empleados en la determinacion de Cedulas
+        </p>
+        <table [hover]="true" [striped]="true" cTable>
+          <thead>
+          <tr>
+            <th scope="col">Ponderacion</th>
+            <th scope="col">Variable</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Opciones</th>
+            <th scope="col">Valores</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">10%</th>
+            <td cTableColor="success">Direccion</td>
+            <td cTableColor="success">Evalua la fortaleza de la alta direccion</td>
+            <td>Cuenta con Consejo de administración con consejeros independientes, planes de sucesión y responsabilidades bien definidas.</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Es dirigida por un administrador único, pero con áreas de operación y responsabilidades bien definidas</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Es dirigida por un administrador con alta concentración de responsabilidades, aunque cuenta con áreas operativas</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Es dirigida por un administrador en el que recaen la toma de decisiones y ejecucón de funciones operativas</td>
+            <td>2</td>
+          </tr>
+
+          <tr>
+            <th scope="row">10%</th>
+            <td cTableColor="success">Años en operación</td>
+            <td cTableColor="success">Evalúa la fortaleza de la empresa para mantenerse en el mercado</td>
+            <td>Más de 10 años de operación</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Entre 5 y 10 años de operación</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Entre 2 y 5 años de operación</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Menos de 2 años de operación</td>
+            <td>2</td>
+          </tr>
+
+          <tr>
+            <th scope="row">10%</th>
+            <td cTableColor="success">Estructura operativa</td>
+            <td cTableColor="success">Evalúa los controles administrativos y de operación</td>
+            <td>Cuenta con un organigrama bien definido y un área de evaluación de crédito y cobranza profesional, con procesos digitales</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Cuenta con organigrama y distribución de funciones pero con debilidades en su funcionamiento</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>No cuenta con área de crédito y cobranza pero si con otras áreas operativas</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>El dueño toma las decisiones de crédito y cobranza</td>
+            <td>2</td>
+          </tr>
+
+          <tr>
+            <th scope="row">25%</th>
+            <td cTableColor="success">Antecedentes crediticios</td>
+            <td cTableColor="success">Evalúa la solvencia moral y económica de la empresa</td>
+            <td>Excelente historial crediticio, sin un solo atraso y uso constante de crédito</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Sin ningun tipo de atraso, pero con poco o nulo uso de crédito</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Tiene atrasos ocasionales por cantidades mínimas respecto a los créditos utilizados</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Malos antecedentes crediticios</td>
+            <td>2</td>
+          </tr>
+
+          <tr>
+            <th scope="row">25%</th>
+            <td cTableColor="success">Antecedentes personales</td>
+            <td cTableColor="success">Evalúa la solvencia moral del dueño o accionistas</td>
+            <td>Sus antecedentes personales describen a una persona de alto prestigio y respetable.</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Sus antecedentes personales hablan de una persona respetable pero con algunos problemas menores</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Sus antecedentes personales hablan de una persona con problemas continúos que hacen dudar de su moralidad</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Sus antecedentes personales hablan de una persona con baja calidad moral</td>
+            <td>2</td>
+          </tr>
+
+          <tr>
+            <th scope="row">10%</th>
+            <td cTableColor="success">Posición en el mercado</td>
+            <td cTableColor="success">Evalúa la fortaleza en el mercado</td>
+            <td>Empresa dominante en el mercado, cuenta con diferenciadores y posicionamiento en el mercado.</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Empresa con buena participación en el mercado, sin embargo sus esquemas de operación son iguales a los de la competencia</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Empresa con baja participación en el mercado, pero con buen posicionamiento frente a sus clientes</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Empresa con mala imagen en el mercado y baja participación</td>
+            <td>2</td>
+          </tr>
+
+          <tr>
+            <th scope="row">10%</th>
+            <td cTableColor="success">Industria</td>
+            <td cTableColor="success">Evalúa el desempeño de la industria en la que participa</td>
+            <td>La mayoría de sus clientes participan en una industria en crecimiento</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>La mayoría de sus clientes participan en una industria en crecimiento pero con riesgo de desaceleración en los próximos años</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>La mayoría de sus clientes participan en una industria que hamostrado estabilidad y se espera que se mantenga así</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>La mayoría de sus clientes participan en una industria con riesgos inminentes o altas posibilidades de caer en alguna crisis</td>
+            <td>2</td>
+          </tr>
+
+
+          </tbody>
+        </table>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
+<c-row ngPreserveWhitespaces>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Informacion Cualitativa</strong> <small>En la determinacion de cedulas</small>
+      </c-card-header>
+      <c-card-body>
+        <p class="text-body-secondary small">
+          Valores empleados en la determinacion de Cedulas
+        </p>
+        <table [hover]="true" [striped]="true" cTable>
+          <thead>
+          <tr>
+            <th scope="col">Ponderacion</th>
+            <th scope="col">Variable</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Opciones</th>
+            <th scope="col">Valores</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">10%</th>
+            <td cTableColor="success">Desempeño en ventas</td>
+            <td cTableColor="success">Evalúa la tendencia en ventas</td>
+            <td>Crecimientos constantes con un promedio de 10% anual</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td>(D2-D1)D1</td>
+            <td>Crecimientos constantes con un promedio de 5% anual</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Crecimientos y decrecimientos en los períodos analizados</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Promedio negativo en los períodos analizados</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th scope="row">25%</th>
+            <td cTableColor="success">Período promedio de cobro</td>
+            <td cTableColor="success">Evalúa los días requeridos para recuperar CXC</td>
+            <td>Reducción constante en los días de CXC</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td>(Ventas / CXC)*días</td>
+            <td>Hay reducciones e incrementos, pero en promedio son menores en el último período respecto al primero</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Se mantienen mas o menos estables, con variaciontes +/- 3 días</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Incremento constante en los días</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th scope="row">25%</th>
+            <td cTableColor="success">Desempeño de la cobranza</td>
+            <td cTableColor="success">Se evalúan los buckets de morosidad de los últimos dos períodos</td>
+            <td>Reducción del IPMF en cada uno de los períodos</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td>Se evalúa en base al indice ponderado de morosidad Flieben (IPMF)</td>
+            <td>Hay reducciones e incrementos, pero es menor en el último período respecto al primero</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>El IPMF se mantiene mas o menos estable, con variaciones de +/- .01 p.p.</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>El IPMF presenta un crecimiento en cada uno de los períodos analizados</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th scope="row">10%</th>
+            <td cTableColor="success">Indice de liquidez</td>
+            <td cTableColor="success">Evalúa la capacidad para cumplir con sus compromisos de CP</td>
+            <td>Liquidez creciente y siempre mayor a 1.5 en todos los períodos analizados</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td>AC/PC</td>
+            <td>Liquidez con altas y bajas pero en todos los casos >1.25</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Liquidez con altas y bajas pero no en todos los casos menor a 1.25</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Liquidez decreciente o en algun período es menor a 1</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th scope="row">10%</th>
+            <td cTableColor="success">Concentración de clientes</td>
+            <td cTableColor="success">Su cliente principal</td>
+            <td>Representan menor a 5% de su cartera </td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td>Utilizar las CXC del último período</td>
+            <td>Representan entre 6% y 10% de su cartera total</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Representan entre 11% y 25% de su cartera total</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Representan > 25% de su cartera total</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th scope="row">10%</th>
+            <td cTableColor="success">Concentración de clientes</td>
+            <td cTableColor="success">Evalúa la concentración de sus 5 principales clientes</td>
+            <td>Representan menor a 10% de su cartera total</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td>Utilizar las CXC del último período</td>
+            <td>Representan entre 11% y 20% de su cartera total</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Representan entre 21% y 50% de su cartera total</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Representan > 50% de su cartera total</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th scope="row">10%</th>
+            <td cTableColor="success">Concentración de clientes</td>
+            <td cTableColor="success">Evalúa la concentración de sus 10 principales clientes</td>
+            <td>Representan menos del 20% de su cartera total</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td>Utilizar las CXC del último período</td>
+            <td>Representan entre 21% y 40% de su cartera total</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Representan entre 41% y 80% de su cartera total</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Representan > 80% de su cartera total</td>
+            <td>2</td>
+          </tr>
+
+
+          </tbody>
+        </table>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>

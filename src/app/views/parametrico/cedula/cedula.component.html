@@ -1,0 +1,321 @@
+<c-row ngPreserveWhitespaces>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Informacion Cualitativa</strong> <small>En la determinacion de cedulas</small>
+      </c-card-header>
+      <c-card-body>
+        <p class="text-body-secondary small">
+          Valores empleados en la determinacion de Cedulas
+        </p>
+        <table [hover]="true" [striped]="true" cTable>
+          <thead>
+          <tr>
+            <th scope="col">Ponderacion</th>
+            <th scope="col">Variable</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Opciones</th>
+            <th scope="col">Valores</th>
+            <th scope="col">Ponderado</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">10%</th>
+            <td>Direccion</td>
+            <td>Evalua la fortaleza de la alta direccion</td>
+            <td>
+              <select
+                [(ngModel)]="cual1"
+                aria-label="Default select example"
+                cSelect
+              >
+                <option value="0">N/A</option>
+                <option value="10">Cuenta con Consejo de administración con consejeros independientes, planes de sucesión y responsabilidades bien definidas.</option>
+                <option value="8">Es dirigida por un administrador único, pero con áreas de operación y responsabilidades bien definidas</option>
+                <option value="5">Es dirigida por un administrador con alta concentración de responsabilidades, aunque cuenta con áreas operativas</option>
+                <option value="2">Es dirigida por un administrador en el que recaen la toma de decisiones y ejecucón de funciones operativas</option>
+              </select>
+            </td>
+            <td>{{cual1}}</td>
+            <td>{{cual1*0.1}}</td>
+          </tr>
+          <tr>
+            <th scope="row">10%</th>
+            <td>Años en operación</td>
+            <td>Evalúa la fortaleza de la empresa para mantenerse en el mercado</td>
+            <td>
+              <select aria-label="Default select example" cSelect [(ngModel)]="cual2">
+                <option value="0">N/A</option>
+                <option value="10">Más de 10 años de operación</option>
+                <option value="8">Entre 5 y 10 años de operación</option>
+                <option value="5">Entre 2 y 5 años de operación</option>
+                <option value="2">Menos de 2 años de operación</option>
+              </select>
+            </td>
+            <td>{{cual2}}</td>
+            <td>{{cual2*0.1}}</td>
+          </tr>
+
+          <tr>
+            <th scope="row">10%</th>
+            <td>Estructura operativa</td>
+            <td>Evalúa los controles administrativos y de operación</td>
+            <td>
+              <select aria-label="Default select example" cSelect [(ngModel)]="cual3">
+                <option value="0">N/A</option>
+                <option value="10">Cuenta con un organigrama bien definido y un área de evaluación de crédito y cobranza profesional, con procesos digitales</option>
+                <option value="8">Cuenta con organigrama y distribución de funciones pero con debilidades en su funcionamiento</option>
+                <option value="5">No cuenta con área de crédito y cobranza pero si con otras áreas operativas</option>
+                <option value="2">El dueño toma las decisiones de crédito y cobranza</option>
+              </select>
+            </td>
+            <td>{{cual3}}</td>
+            <td>{{cual3*0.1}}</td>
+          </tr>
+
+          <tr>
+            <th scope="row">25%</th>
+            <td>Antecedentes crediticios</td>
+            <td>Evalúa la solvencia moral y económica de la empresa</td>
+            <td>
+              <select aria-label="Default select example" cSelect [(ngModel)]="cual4">
+                <option value="0">N/A</option>
+                <option value="10">Excelente historial crediticio, sin un solo atraso y uso constante de crédito</option>
+                <option value="8">Sin ningun tipo de atraso, pero con poco o nulo uso de crédito</option>
+                <option value="5">Tiene atrasos ocasionales por cantidades mínimas respecto a los créditos utilizados</option>
+                <option value="2">Malos antecedentes crediticios</option>
+              </select>
+            </td>
+            <td>{{cual4}}</td>
+            <td>{{cual4*0.25}}</td>
+          </tr>
+
+          <tr>
+            <th scope="row">25%</th>
+            <td>Antecedentes personales</td>
+            <td>Evalúa la solvencia moral del dueño o accionistas</td>
+            <td>
+              <select aria-label="Default select example" cSelect [(ngModel)]="cual5">
+                <option value="0">N/A</option>
+                <option value="10">Sus antecedentes personales describen a una persona de alto prestigio y respetable.</option>
+                <option value="8">Sus antecedentes personales hablan de una persona respetable pero con algunos problemas menores</option>
+                <option value="5">Sus antecedentes personales hablan de una persona con problemas continúos que hacen dudar de su moralidad</option>
+                <option value="2">Sus antecedentes personales hablan de una persona con baja calidad moral</option>
+              </select>
+            </td>
+            <td>{{cual5}}</td>
+            <td>{{cual5*0.25}}</td>
+          </tr>
+
+          <tr>
+            <th scope="row">10%</th>
+            <td>Posición en el mercado</td>
+            <td>Evalúa la fortaleza en el mercado</td>
+            <td>
+              <select aria-label="Default select example" cSelect [(ngModel)]="cual6">
+                <option value="0">N/A</option>
+                <option value="10">Empresa dominante en el mercado, cuenta con diferenciadores y posicionamiento en el mercado.</option>
+                <option value="8">Empresa con buena participación en el mercado, sin embargo sus esquemas de operación son iguales a los de la competencia</option>
+                <option value="5">Empresa con baja participación en el mercado, pero con buen posicionamiento frente a sus clientes</option>
+                <option value="2">Empresa con mala imagen en el mercado y baja participación</option>
+              </select>
+            </td>
+            <td>{{cual6}}</td>
+            <td>{{cual6*0.1}}</td>
+          </tr>
+
+          <tr>
+            <th scope="row">10%</th>
+            <td>Industria</td>
+            <td>Evalúa el desempeño de la industria en la que participa</td>
+            <td>
+              <select aria-label="Default select example" cSelect [(ngModel)]="cual7">
+                <option value="0">N/A</option>
+                <option value="10">La mayoría de sus clientes participan en una industria en crecimiento</option>
+                <option value="8">La mayoría de sus clientes participan en una industria en crecimiento pero con riesgo de desaceleración en los próximos años</option>
+                <option value="5">La mayoría de sus clientes participan en una industria que hamostrado estabilidad y se espera que se mantenga así</option>
+                <option value="2">La mayoría de sus clientes participan en una industria con riesgos inminentes o altas posibilidades de caer en alguna crisis</option>
+              </select>
+            </td>
+            <td>{{cual7}}</td>
+            <td>{{cual7*0.1}}</td>
+          </tr>
+
+          </tbody>
+        </table>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
+<c-row ngPreserveWhitespaces>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Informacion Cualitativa</strong> <small>En la determinacion de cedulas</small>
+      </c-card-header>
+      <c-card-body>
+        <p class="text-body-secondary small">
+          Valores empleados en la determinacion de Cedulas
+        </p>
+        <table [hover]="true" [striped]="true" cTable>
+          <thead>
+          <tr>
+            <th scope="col">Ponderacion</th>
+            <th scope="col">Variable</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Opciones</th>
+            <th scope="col">Valores</th>
+            <th scope="col">Ponderado</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">10%</th>
+            <td>Desempeño en ventas</td>
+            <td>Evalúa la tendencia en ventas</td>
+            <td>
+              <select aria-label="Default select example" cSelect [(ngModel)]="cuant1">
+                <option value="0">N/A</option>
+                <option value="10">Crecimientos constantes con un promedio de 10% anual</option>
+                <option value="8">Crecimientos constantes con un promedio de 5% anual</option>
+                <option value="5">Crecimientos y decrecimientos en los períodos analizados</option>
+                <option value="2">Promedio negativo en los períodos analizados</option>
+              </select>
+            </td>
+            <td>{{cuant1}}</td>
+            <td>{{cuant1*0.1}}</td>
+          </tr>
+
+          <tr>
+            <th scope="row">25%</th>
+            <td>Período promedio de cobro</td>
+            <td>Evalúa los días requeridos para recuperar CXC</td>
+            <td>
+              <select aria-label="Default select example" cSelect [(ngModel)]="cuant2">
+                <option value="0">N/A</option>
+                <option value="10">Reducción constante en los días de CXC</option>
+                <option value="8">Hay reducciones e incrementos, pero en promedio son menores en el último período respecto al primero</option>
+                <option value="5">Se mantienen mas o menos estables, con variaciontes +/- 3 días</option>
+                <option value="2">Incremento constante en los días</option>
+              </select>
+            </td>
+            <td>{{cuant2}}</td>
+            <td>{{cuant2*0.25}}</td>
+          </tr>
+
+          <tr>
+            <th scope="row">25%</th>
+            <td>Desempeño de la cobranza</td>
+            <td>Se evalúan los buckets de morosidad de los últimos dos períodos</td>
+            <td>
+              <select aria-label="Default select example" cSelect [(ngModel)]="cuant3">
+                <option value="0">N/A</option>
+                <option value="10">Reducción del IPMF en cada uno de los períodos</option>
+                <option value="8">Hay reducciones e incrementos, pero es menor en el último período respecto al primero</option>
+                <option value="5">El IPMF se mantiene mas o menos estable, con variaciones de +/- .01 p.p.</option>
+                <option value="2">El IPMF presenta un crecimiento en cada uno de los períodos analizados</option>
+              </select>
+            </td>
+            <td>{{cuant3}}</td>
+            <td>{{cuant3*0.25}}</td>
+          </tr>
+
+          <tr>
+            <th scope="row">10%</th>
+            <td>Indice de liquidez</td>
+            <td>Evalúa la capacidad para cumplir con sus compromisos de CP</td>
+            <td>
+              <select aria-label="Default select example" cSelect [(ngModel)]="cuant4">
+                <option value="0">N/A</option>
+                <option value="10">Liquidez creciente y siempre mayor a 1.5 en todos los períodos analizados</option>
+                <option value="8">Liquidez con altas y bajas pero en todos los casos >1.25</option>
+                <option value="5">Liquidez con altas y bajas pero no en todos los casos menor a 1.25</option>
+                <option value="2">Liquidez decreciente o en algun período es menor a 1</option>
+              </select>
+            </td>
+            <td>{{cuant4}}</td>
+            <td>{{cuant4*0.1}}</td>
+          </tr>
+
+          <tr>
+            <th scope="row">10%</th>
+            <td>Concentración de clientes</td>
+            <td>Su cliente principal</td>
+            <td>
+              <select aria-label="Default select example" cSelect [(ngModel)]="cuant5">
+                <option value="0">N/A</option>
+                <option value="10">Representan menor a 5% de su cartera </option>
+                <option value="8">Representan entre 6% y 10% de su cartera total</option>
+                <option value="5">Representan entre 11% y 25% de su cartera total</option>
+                <option value="2">Representan > 25% de su cartera total</option>
+              </select>
+            </td>
+            <td>{{cuant5}}</td>
+            <td>{{cuant5*0.1}}</td>
+          </tr>
+
+          <tr>
+            <th scope="row">10%</th>
+            <td>Concentración de clientes</td>
+            <td>Evalúa la concentración de sus 5 principales clientes</td>
+            <td>
+              <select aria-label="Default select example" cSelect [(ngModel)]="cuant6">
+                <option value="0">N/A</option>
+                <option value="10">Representan menor a 10% de su cartera total</option>
+                <option value="8">Representan entre 11% y 20% de su cartera total</option>
+                <option value="5">Representan entre 21% y 50% de su cartera total</option>
+                <option value="2">Representan > 50% de su cartera total</option>
+              </select>
+            </td>
+            <td>{{cuant6}}</td>
+            <td>{{cuant6*0.1}}</td>
+          </tr>
+
+          <tr>
+            <th scope="row">10%</th>
+            <td>Concentración de clientes</td>
+            <td>Evalúa la concentración de sus 10 principales clientes</td>
+            <td>
+              <select aria-label="Default select example" cSelect [(ngModel)]="cuant7">
+                <option value="0">N/A</option>
+                <option value="10">Representan menos del 20% de su cartera total</option>
+                <option value="8">Representan entre 21% y 40% de su cartera total</option>
+                <option value="5">Representan entre 41% y 80% de su cartera total</option>
+                <option value="2">Representan > 80% de su cartera total</option>
+              </select>
+            </td>
+            <td>{{cuant7}}</td>
+            <td>{{cuant7*0.1}}</td>
+          </tr>
+
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Total información cualitativa </td>
+            <td>{{cuant7}}</td>
+            <td>{{cuant7*0.1}}</td>
+          </tr>
+          <tr>
+            <th scope="row">60%</th>
+            <td>Ponderación cuantitativa</td>
+            <td></td>
+            <td>Estatus</td>
+            <td>{{cuant7}}</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>GRAN TOTAL</td>
+            <td>{{cuant7}}</td>
+            <td>{{cuant7*0.1}}</td>
+          </tr>
+
+          </tbody>
+        </table>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
