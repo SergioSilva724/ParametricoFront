@@ -44,6 +44,31 @@ export const navItems: INavData[] = [
         url: '/parametrico/cedula',
         icon: 'nav-icon-bullet'
       },
+      {
+        name: 'PAC Empresarial',
+        url: '/parametrico/pacempresarial',
+        icon: 'nav-icon-bullet'
+      },
+      {
+        name: 'Dictamen Credito',
+        url: '/parametrico/dictamencredito',
+        icon: 'nav-icon-bullet'
+      },
+      {
+        name: 'EEFF',
+        url: '/parametrico/eeff',
+        icon: 'nav-icon-bullet'
+      },
+      {
+        name: 'Promedios',
+        url: '/parametrico/promedios',
+        icon: 'nav-icon-bullet'
+      },
+      {
+        name: 'Declaracion Patrimonial',
+        url: '/parametrico/declaracionpatrimonial',
+        icon: 'nav-icon-bullet'
+      },
     ]
   },
   {
