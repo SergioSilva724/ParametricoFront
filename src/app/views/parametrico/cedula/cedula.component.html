@@ -142,6 +142,23 @@
             <td>{{cual7*0.1}}</td>
           </tr>
 
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Total información cualitativa </td>
+            <td>Pasa?{{cual7}}</td>
+            <td>Pasa?{{cual7*0.1}}</td>
+          </tr>
+          <tr>
+            <th scope="row">40%</th>
+            <td>Ponderación cualitativa</td>
+            <td></td>
+            <td>Estatus</td>
+            <td>{{cual1*1+cual2*1+cual3*1+cual4*1+cual5*1+cual6*1+cual7*1}}</td>
+            <td>{{cual1*0.1+cual2*0.1+cual3*0.1+cual4*0.25+cual5*0.25+cual6*0.10+cual7*0.1}}</td>
+          </tr>
+
           </tbody>
         </table>
       </c-card-body>
@@ -152,7 +169,7 @@
   <c-col xs="12">
     <c-card class="mb-4">
       <c-card-header>
-        <strong>Informacion Cualitativa</strong> <small>En la determinacion de cedulas</small>
+        <strong>Informacion Cuantitativa</strong> <small>En la determinacion de cedulas</small>
       </c-card-header>
       <c-card-body>
         <p class="text-body-secondary small">
@@ -294,15 +311,16 @@
             <td></td>
             <td></td>
             <td>Total información cualitativa </td>
-            <td>{{cuant7}}</td>
-            <td>{{cuant7*0.1}}</td>
+            <td>Pasa?{{cuant7}}</td>
+            <td>Pasa?{{cuant7*0.1}}</td>
           </tr>
           <tr>
-            <th scope="row">60%</th>
+            <th scope="row">40%</th>
             <td>Ponderación cuantitativa</td>
             <td></td>
             <td>Estatus</td>
-            <td>{{cuant7}}</td>
+            <td>{{cuant1*1+cuant2*1+cuant3*1+cuant4*1+cuant5*1+cuant6*1+cuant7*1}}</td>
+            <td>{{cuant1*0.1+cuant2*0.25+cuant3*0.25+cuant4*0.10+cuant5*0.10+cuant6*0.10+cuant7*0.1}}</td>
           </tr>
           <tr>
             <th scope="row"></th>
@@ -310,7 +328,7 @@
             <td></td>
             <td>GRAN TOTAL</td>
             <td>{{cuant7}}</td>
-            <td>{{cuant7*0.1}}</td>
+            <td>{{(cuant1*0.1+cuant2*0.25+cuant3*0.25+cuant4*0.10+cuant5*0.10+cuant6*0.10+cuant7*0.1)*0.4}}</td>
           </tr>
 
           </tbody>
@@ -319,3 +337,110 @@
     </c-card>
   </c-col>
 </c-row>
+<c-row ngPreserveWhitespaces>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>ESG</strong> <small>En la determinacion de cedulas</small>
+      </c-card-header>
+      <c-card-body>
+        <p class="text-body-secondary small">
+          Valores empleados en la determinacion de Cedulas
+        </p>
+        <table [hover]="true" [striped]="true" cTable>
+          <thead>
+          <tr>
+            <th scope="col">Ponderacion</th>
+            <th scope="col">Variable</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Opciones</th>
+            <th scope="col">Valores</th>
+            <th scope="col">Ponderado</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">33%</th>
+            <td>ENVIROMENT</td>
+            <td>Evalua la responsabilidad de la empresa respecto al cuidado del medio ambiente</td>
+            <td>
+              <select aria-label="Default select example" cSelect [(ngModel)]="esg1">
+                <option value="0">N/A</option>
+                <option value="10">Empresa que promueve productos o servicios que cuidan el medio ambiente, la reducción de gases de efecto invernadero</option>
+                <option value="8">Empresa que su actividad no tiene relación con el cuidado del medio ambiente o al menos no se detecta un aspecto que lo beneficia o lo perjudique</option>
+                <option value="5">Empresa que por sus actividades tiene un ligero impacto negativo sobre el medio ambiente</option>
+                <option value="-100">Empresa que por sus actividades tiene un impacto marcademente negativo apra el medio ambiente</option>
+              </select>
+            </td>
+            <td>{{esg1}}</td>
+            <td>{{(esg1/3).toFixed(2)}}</td>
+          </tr>
+
+          <tr>
+            <th scope="row">33%</th>
+            <td>SOCIAL</td>
+            <td>Evalua el impacto que la empresa tiene en la sociedad</td>
+            <td>
+              <select aria-label="Default select example" cSelect [(ngModel)]="esg2">
+                <option value="0">N/A</option>
+                <option value="10">Empresa que por sus actividades principales o secundarias promueve el bienestar social y el beneficio de stakeholders, con politicas bien definidas y medibles</option>
+                <option value="8">Empresa que por sus actividades principales, productos o servicios impacta positivamente a la sociedad</option>
+                <option value="5">Empresa que no cuenta con políticas de beneficio social, pero que tampoco tiene un impacto negativo</option>
+                <option value="-100">Empresa que por sus actividades impacta negativamente a la sociedad o la perjudica</option>
+              </select>
+            </td>
+            <td>{{esg2}}</td>
+            <td>{{(esg2/3).toFixed(2)}}</td>
+          </tr>
+
+          <tr>
+            <th scope="row">33%</th>
+            <td>GOVERNANCE</td>
+            <td>Evalua la estructura de la alta dirección y sus mecanismos para la toma de decisiones</td>
+            <td>
+              <select aria-label="Default select example" cSelect [(ngModel)]="esg3">
+                <option value="0">N/A</option>
+                <option value="10">Empresa con niveles jerarquicos bien definidos, división de funciones, planes de sucesión, comité de supervisores y todos aquellos que minimicen el riesgo de corrupción o practicas ilegales</option>
+                <option value="8">Empresa con niveles jerarquicos bien definidos y practicas adecuadas, sin embargo, no cuenta con una estructura solida de governanza</option>
+                <option value="5">Empresa cuya toma de decisiones recae en uno o pocos individuos y no existen contrapresos en la toma de decisiones</option>
+                <option value="-100">Empresa que claramente incurre en practicas de corrupción o actividades dudosas</option>
+              </select>
+            </td>
+            <td>{{esg3}}</td>
+            <td>{{(esg3/3).toFixed(2)}}</td>
+          </tr>
+
+
+
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Total información cualitativa </td>
+            <td>Pasa?{{cuant7}}</td>
+            <td>Pasa?{{cuant7*0.1}}</td>
+          </tr>
+          <tr>
+            <th scope="row">40%</th>
+            <td>Ponderación cuantitativa</td>
+            <td></td>
+            <td>Estatus</td>
+            <td>{{cuant1*1+cuant2*1+cuant3*1+cuant4*1+cuant5*1+cuant6*1+cuant7*1}}</td>
+            <td>{{cuant1*0.1+cuant2*0.25+cuant3*0.25+cuant4*0.10+cuant5*0.10+cuant6*0.10+cuant7*0.1}}</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>GRAN TOTAL</td>
+            <td>{{cuant7}}</td>
+            <td>{{(cuant1*0.1+cuant2*0.25+cuant3*0.25+cuant4*0.10+cuant5*0.10+cuant6*0.10+cuant7*0.1)*0.4}}</td>
+          </tr>
+
+          </tbody>
+        </table>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
+

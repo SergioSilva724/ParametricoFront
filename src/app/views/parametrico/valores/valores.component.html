@@ -233,7 +233,7 @@
   <c-col xs="12">
     <c-card class="mb-4">
       <c-card-header>
-        <strong>Informacion Cualitativa</strong> <small>En la determinacion de cedulas</small>
+        <strong>Informacion Cuantitativa</strong> <small>En la determinacion de cedulas</small>
       </c-card-header>
       <c-card-body>
         <p class="text-body-secondary small">
@@ -448,6 +448,118 @@
           </tr>
 
 
+          </tbody>
+        </table>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
+
+<c-row ngPreserveWhitespaces>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>ESG</strong> <small>En la determinacion de cedulas</small>
+      </c-card-header>
+      <c-card-body>
+        <p class="text-body-secondary small">
+          Valores empleados en la determinacion de Cedulas
+        </p>
+        <table [hover]="true" [striped]="true" cTable>
+          <thead>
+          <tr>
+            <th scope="col">Ponderacion</th>
+            <th scope="col">Variable</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Opciones</th>
+            <th scope="col">Valores</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">33%</th>
+            <td cTableColor="success">ENVIROMENT</td>
+            <td cTableColor="success">Evalua la responsabilidad de la empresa respecto al cuidado del medio ambiente</td>
+            <td>Empresa que promueve productos o servicios que cuidan el medio ambiente, la reducción de gases de efecto invernadero</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Empresa que su actividad no tiene relación con el cuidado del medio ambiente o al menos no se detecta un aspecto que lo beneficia o lo perjudique</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Empresa que por sus actividades tiene un ligero impacto negativo sobre el medio ambiente</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Empresa que por sus actividades tiene un impacto marcademente negativo apra el medio ambiente</td>
+            <td>KO</td>
+          </tr>
+          <tr>
+            <th scope="row">33%</th>
+            <td cTableColor="success">SOCIAL</td>
+            <td cTableColor="success">Evalua el impacto que la empresa tiene en la sociedad</td>
+            <td>Empresa que por sus actividades principales o secundarias promueve el bienestar social y el beneficio de stakeholders, con politicas bien definidas y medibles</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Empresa que por sus actividades principales, productos o servicios impacta positivamente a la sociedad</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Empresa que no cuenta con políticas de beneficio social, pero que tampoco tiene un impacto negativo</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Empresa que por sus actividades impacta negativamente a la sociedad o la perjudica</td>
+            <td>KO</td>
+          </tr>
+          <tr>
+            <th scope="row">33%</th>
+            <td cTableColor="success">GOVERNANCE</td>
+            <td cTableColor="success">Evalua la estructura de la alta dirección y sus mecanismos para la toma de decisiones</td>
+            <td>Empresa con niveles jerarquicos bien definidos, división de funciones, planes de sucesión, comité de supervisores y todos aquellos que minimicen el riesgo de corrupción o practicas ilegales</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Empresa con niveles jerarquicos bien definidos y practicas adecuadas, sin embargo, no cuenta con una estructura solida de governanza</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Empresa cuya toma de decisiones recae en uno o pocos individuos y no existen contrapresos en la toma de decisiones</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>Empresa que claramente incurre en practicas de corrupción o actividades dudosas</td>
+            <td>KO</td>
+          </tr>
           </tbody>
         </table>
       </c-card-body>

@@ -63,4 +63,8 @@ export class CedulaComponent {
   cuant6=0
   cuant7=0
 
+  esg1=0
+  esg2=0
+  esg3=0
+
 }
